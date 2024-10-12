@@ -1,0 +1,40 @@
+{
+    "schema": {
+        "fields": [
+            {
+                "name": "index",
+                "type": "integer"
+            },
+            {
+                "name": "Name",
+                "type": "string"
+            },
+            {
+                "name": "Age",
+                "type": "integer"
+            },
+            {
+                "name": "Height",
+                "type": "integer"
+            }
+        ],
+        "primaryKey": [
+            "index"
+        ],
+        "pandas_version": "1.4.0"
+    },
+    "data": [
+        {
+            "index": 0,
+            "Name": "Ted",
+            "Age": 24,
+            "Height": 177
+        },
+        {
+            "index": 1,
+            "Name": "Judy",
+            "Age": 27,
+            "Height": 183
+        }
+    ]
+}
