@@ -1,6 +1,7 @@
 FROM python:3.12-slim-bullseye
 
 ENV TZ=Asia/Taipei
+ENV API_HOST=http://host.docker.internal:3306
 
 COPY requirements.txt requirements.txt
 
