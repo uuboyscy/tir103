@@ -1,0 +1,49 @@
+{
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "streetsidesoftware.code-spell-checker",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "shardulm94.trailing-spaces",
+        "vivaxy.vscode-conventional-commits",
+        "bierner.markdown-mermaid",
+        "ms-toolsai.jupyter",
+        "ms-python.black-formatter"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.tabSize": 4,
+        "editor.rulers": [
+          100
+        ],
+        "[python]": {
+          "python.formatting.provider": "black",
+          "editor.codeActionsOnSave": {
+            "editor.formatOnSave": true,
+            "source.unusedImports": false,
+            "source.organizeImports": true
+          }
+        }
+      }
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh_mounted,type=bind,consistency=cached",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/root/.gitconfig_mounted,type=bind,consistency=cached"
+  ],
+  "remoteEnv": {
+    "PYTHONPATH": "/workspaces/prefect-demo/src"
+  },
+  "postCreateCommand": "sh ./.devcontainer/postCreateCommand.sh",
+  "runArgs": [
+    "--name",
+    "prefect-demo"
+  ]
+}
