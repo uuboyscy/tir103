@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "gcp"
+version = "0.1.0"
+description = ""
+authors = ["uuboyscy <aegis12321@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.8"
+google-cloud-bigquery = "^3.26.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
