@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 python:3.11-slim-bullseye
+FROM python:3.11-slim-bullseye
 
 WORKDIR /workspace
 
@@ -19,4 +19,5 @@ RUN apt-get install -y zsh \
 RUN pip install --upgrade pip
 RUN pip install flask
 
-CMD ["flask", "run"]
+# CMD ["flask", "run"]
+CMD ["python", "/some_path/for/python.py"]
